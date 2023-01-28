@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallet</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./configtailwind.js"></script>
+</head>
+
+<body class="bg-[#F2F3F5]">
+    <!-- navBar -->
+    <nav class="w-full h-8 px-3 pl-4 flex justify-between bg-gradient-to-r from-black via-black to-[#4D4D4D]">
+        <div class="">
+            <button class="text-white mt-2 md:hidden" onclick="collapseNav()"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="18" height="18" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg></button>
+            <div class="hidden gap-4 text-white ml-40 md:flex mt-1">
+                <a href="#" class="mx-auto">Dashboard</a>
+                <a href="#" class="mx-auto ">Home</a>
+                <a href="#" class="mx-auto ">Trade</a>
+                <a href="#" class="mx-auto ">Buy Crypto</a>
+                <a href="#" class="mx-auto ">Help</a>
+            </div>
+        </div>
+        <div class="flex">
+            <a href="#" class="text-white mr-4 mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg></a>
+            <div class="relative z-0 mt-2 mr-4"> <a href="#" class="text-white mt-2 mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bell-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                    </svg>
+                    <div class="rounded-full bg-[#FF2966] w-2 h-2 absolute right-0 bottom-2"></div>
+                </a>
+            </div>
+            <a href="#" class="text-white mt-1">English</a>
+        </div>
+    </nav>
+    <!-- end NavBar -->
+    <!-- toggle Manu -->
+    <div id="backgroundBlack" class="w-full h-full fixed top-0 left-0 opacity-70 bg-black hidden z-[98]"></div>
+    <div id="collapseManu" data-toggle="hide"
+        class="text-white z-[99] md:hidden md:flex-row  md:bg-transparent md:w-96 md:h-8 md:ml-40 hidden fixed top-0 left-0 w-80 h-full bg-black flex-col gap-y-3 gap-x-4">
+        <div class="">
+            <button class="text-white mt-2 ml-3 md:hidden" onclick="collapseNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+        </div>
+        <div class="bg-black w-44 h-32 flex flex-col pt-5 mx-auto mb-5 md:hidden">
+            <img src="./img/logo.png" height="70px" width="70px" alt="Logo" class="mx-auto" />
+            <a href="#" class="text-white text-lg mx-auto font-bold">BitMart</a>
+        </div>
+        <a href="#" class="ml-3">Dashboard</a>
+        <a href="#" class="ml-3 ">Home</a>
+        <a href="#" class="ml-3 ">Trade</a>
+        <a href="#" class="ml-3 ">Buy Crypto</a>
+        <a href="#" class="ml-3 ">Help</a>
+        <div class="md:hidden flex flex-col gap-y-3">
+            <a href="#" class="ml-3">Wallet</a>
+            <a href="#" class="ml-3">Accounting</a>
+            <a href="#" class="ml-3">Identification</a>
+            <a href="#" class="ml-3">Security</a>
+            <a href="#" class="ml-3">Referral</a>
+            <a href="#" class="ml-3">Ticket</a>
+            <a href="#" class="ml-3">Explorer</a>
+            <a href="#" class="ml-3">Setting</a>
+            <a href="#" class="ml-3">Logout</a>
+        </div>
+    </div>
+    <!-- end Toggle Manu -->
+    <div class="flex flex-row h-full w-full">
+        <!-- sideBar -->
+        <div class="hidden md:flex flex-col h-[750px] w-44 bg-black gap-6">
+            <div class="bg-black w-44 h-36 flex flex-col pt-5"><img src="./img/logo.png" height="50px" width="50px"
+                    alt="Logo" class="mx-auto" /><a href="#" class="text-white mx-auto font-bold">BitMart</a>
+            </div>
+            <a href="#" onclick="changeMenu(1)" class="menu-item text-[#DCDDDE] ml-7 h-9 pt-1">Accounting</a>
+            <a href="#" onclick="changeMenu(2)" class="menu-item text-[#DCDDDE] ml-7 h-9 pt-1 active-item">Wallet</a>
+            <a href="#" onclick="changeMenu(3)" class="menu-item text-[#DCDDDE] ml-7 h-9 pt-1">Identification</a>
+            <a href="#" onclick="changeMenu(4)" class="menu-item text-[#DCDDDE] ml-7 h-9 pt-1">Security</a>
+            <a href="#" onclick="changeMenu(5)" class="menu-item text-[#DCDDDE] ml-7 h-9 pt-1">Referral</a>
+            <a href="#" onclick="changeMenu(6)" class="menu-item text-[#DCDDDE] ml-7 h-9 pt-1">Ticket</a>
+            <a href="#" onclick="changeMenu(7)" class="menu-item text-[#DCDDDE] ml-7 h-9 pt-1">Explorer</a>
+            <a href="#" onclick="changeMenu(8)" class="menu-item text-[#DCDDDE] ml-7 h-9 pt-1">Setting</a>
+            <a href="#" class="menu-item text-[#DCDDDE] ml-7 h-9 pt-1 mb-5">Logout</a>
+            <script src="./all.js"></script>
+        </div>
+        <!-- end SideBar -->
+        <!-- content -->
+        <div class="p-7 w-full mx-auto overflow-hidden z-50">
+            <div class="w-full h-full bg-white rounded-lg p-5">
+                <div class="flex justify-between flex-col sm:flex-row">
+                    <div class="mb-4">
+                        <span class="text-xl font-bold">Fiat and Spot</span>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <button class="w-20 p-2 h-10 bg-[#F6DE2E] rounded-lg mr-3 mb-3 sm:mb-0"><span
+                                class="mx-auto">Despoit</span></button>
+                        <button class="w-22 p-2 h-10 bg-[#F2F3F5] rounded-lg mr-3 mb-3 sm:mb-0"><span
+                                class="mx-auto">Withdraw</span></button>
+                        <button class="w-16 p-2 h-10 bg-[#F2F3F5] rounded-lg mr-3"><span
+                                class="mx-auto">Send</span></button>
+                        <button class="w-16 p-2 h-10 bg-[#F2F3F5] rounded-lg"><span
+                                class="mx-auto">History</span></button>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div>
+                        <span>Fiat and Spot <br /> balance</span>
+                    </div>
+                    <div class="mt-4 border-b pb-2">
+                        <span class="font-bold text-xl mr-16">0.06341324 BTC</span>
+                        <span class="text-gray-400">= $2965.27</span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap mt-3 gap-5">
+                    <div class="flex relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search absolute top-3 left-1 text-gray-400" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                        <input class="w-40 h-9 pl-6 border border-gray-400 rounded-sm" type="text"
+                            placeholder="Search" />
+                    </div>
+                    <div>
+                        <input class="mt-3 accent-[#F6DE2E]" type="checkbox" name="check" id="check">
+                        <abbr title="#" class="text-gray-400">Hide small balances</abbr>
+                    </div>
+                    <a href="#" class="text-[#F6DE2E] mt-2">Convert small assets</a>
+                </div>
+                <div class="overflow-x-scroll">
+                    <div
+                        class="hidden smm:flex flex-nowrap w-650 md:w-1050 h-10 bg-gray-200 mt-3 rounded-lg justify-start gap-x-16 px-2">
+                        <div class="flex mt-2">
+                            <span class="text-gray-400">Coin</span>
+                            <div class="flex flex-col text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                    class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex mt-2">
+                            <span class="text-gray-400">Total</span>
+                            <div class="flex flex-col text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                    class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex mt-2">
+                            <span class="text-gray-400">Available</span>
+                            <div class="flex flex-col text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                    class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex mt-2">
+                            <span class="text-gray-400">In Order</span>
+                            <div class="flex flex-col text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                    class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex mt-2">
+                            <span class="text-gray-400">BTC Value</span>
+                            <div class="flex flex-col text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                    class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="md:flex mt-2 hidden">
+                            <span class="text-gray-400">Action</span>
+                        </div>
+                    </div>
+                    <div class="h-auto w-full flex flex-col mt-3 lg:w-1050">
+                        <div class="my-2">
+                            <div class="flex mt-2 pb-3 w-auto smm:w-650 md:!w-1050 border-b">
+                                <div class="flex md:mr-7">
+                                    <img src="./img/idex.jfif" width="45" height="25" alt="idexLogo" />
+                                    <div class="flex flex-col ml-3">
+                                        <span>IDEX</span>
+                                        <span class="text-gray-400">IDEX</span>
+                                    </div>
+                                </div>
+                                <div class="mt-2 text-gray-400 flex flex-nowrap w-full smm:w-auto">
+                                    <div class="flex w-full justify-end mt-1">
+                                        <span class="smm:ml-8 md:!ml-0">15.842.6000</span>
+                                        <span onclick="walletTable(1)" class="smm:hidden pt-1 pl-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-caret-down-fill wallet-toggle-icon"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                            </svg>
+                                        </span>
+                                        <span onclick="walletButnSheet()">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor"
+                                                class="bi bi-three-dots-vertical smm:hidden mt-1 ml-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <span class="md:ml-6 ml-5 hidden smm:inline">15.842.600</span>
+                                    <span class="md:ml-20 ml-20 hidden smm:inline">0.000</span>
+                                    <span class="md:ml-24 ml-24 hidden smm:inline">0.06257827</span>
+                                </div>
+                                <div class="flex w-auto">
+                                    <div onclick="walletButnSheet()" class="hidden smm:inline-block mt-3 ml-7">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor"
+                                            class="bi bi-three-dots-vertical md:hidden text-gray-400"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                        </svg>
+                                    </div>
+                                    <div class="text-[#F6DE2E] gap-x-6 ml-10 mt-2 hidden md:flex">
+                                        <a href="#"><span>Buy</span></a>
+                                        <a href="#"><span>Deposit</span></a>
+                                        <a href="#"><span>Withdraw</span></a>
+                                        <a href="#"><span>Trade</span></a>
+                                        <a href="#"><span>Convert</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="walletTable"
+                                class="hidden w-full h-auto text-gray-400 pb-2 border px-2 pt-1 border-t-0 justify-between">
+                                <div class="flex flex-col">
+                                    <span>In Order</span>
+                                    <span>Available</span>
+                                    <span>IDEX Value</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span>0.0000</span>
+                                    <span>0.0000</span>
+                                    <span>0.0000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-2">
+                            <div class="flex mt-2 pb-3 w-auto smm:w-650 md:!w-1050 border-b">
+                                <div class="flex md:mr-7">
+                                    <img src="./img/idex.jfif" width="45" height="25" alt="idexLogo" />
+                                    <div class="flex flex-col ml-3">
+                                        <span>IDEX</span>
+                                        <span class="text-gray-400">IDEX</span>
+                                    </div>
+                                </div>
+                                <div class="mt-2 text-gray-400 flex flex-nowrap w-full smm:w-auto">
+                                    <div class="flex w-full justify-end mt-1">
+                                        <span class="smm:ml-8 md:!ml-0">15.842.6000</span>
+                                        <span onclick="walletTable(2)" class="smm:hidden pt-1 pl-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-caret-down-fill wallet-toggle-icon"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                            </svg>
+                                        </span>
+                                        <span onclick="walletButnSheet()">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor"
+                                                class="bi bi-three-dots-vertical smm:hidden mt-1 ml-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <span class="md:ml-6 ml-5 hidden smm:inline">15.842.600</span>
+                                    <span class="md:ml-20 ml-20 hidden smm:inline">0.000</span>
+                                    <span class="md:ml-24 ml-24 hidden smm:inline">0.06257827</span>
+                                </div>
+                                <div class="flex w-auto">
+                                    <div onclick="walletButnSheet()" class="hidden smm:inline-block mt-3 ml-7">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor"
+                                            class="bi bi-three-dots-vertical md:hidden text-gray-400"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                        </svg>
+                                    </div>
+                                    <div class="text-[#F6DE2E] gap-x-6 ml-10 mt-2 hidden md:flex">
+                                        <a href="#"><span>Buy</span></a>
+                                        <a href="#"><span>Deposit</span></a>
+                                        <a href="#"><span>Withdraw</span></a>
+                                        <a href="#"><span>Trade</span></a>
+                                        <a href="#"><span>Convert</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="walletTable"
+                                class="hidden w-full h-auto text-gray-400 pb-2 border px-2 pt-1 border-t-0 justify-between">
+                                <div class="flex flex-col">
+                                    <span>In Order</span>
+                                    <span>Available</span>
+                                    <span>IDEX Value</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span>0.0000</span>
+                                    <span>0.0000</span>
+                                    <span>0.0000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-2">
+                            <div class="flex mt-2 pb-3 w-auto smm:w-650 md:!w-1050 border-b">
+                                <div class="flex md:mr-7">
+                                    <img src="./img/idex.jfif" width="45" height="25" alt="idexLogo" />
+                                    <div class="flex flex-col ml-3">
+                                        <span>IDEX</span>
+                                        <span class="text-gray-400">IDEX</span>
+                                    </div>
+                                </div>
+                                <div class="mt-2 text-gray-400 flex flex-nowrap w-full smm:w-auto">
+                                    <div class="flex w-full justify-end mt-1">
+                                        <span class="smm:ml-8 md:!ml-0">15.842.6000</span>
+                                        <span onclick="walletTable(3)" class="smm:hidden pt-1 pl-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-caret-down-fill wallet-toggle-icon"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                            </svg>
+                                        </span>
+                                        <span onclick="walletButnSheet()">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor"
+                                                class="bi bi-three-dots-vertical smm:hidden mt-1 ml-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <span class="md:ml-6 ml-5 hidden smm:inline">15.842.600</span>
+                                    <span class="md:ml-20 ml-20 hidden smm:inline">0.000</span>
+                                    <span class="md:ml-24 ml-24 hidden smm:inline">0.06257827</span>
+                                </div>
+                                <div class="flex w-auto">
+                                    <div onclick="walletButnSheet()" class="hidden smm:inline-block mt-3 ml-7">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor"
+                                            class="bi bi-three-dots-vertical md:hidden text-gray-400"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                        </svg>
+                                    </div>
+                                    <div class="text-[#F6DE2E] gap-x-6 ml-10 mt-2 hidden md:flex">
+                                        <a href="#"><span>Buy</span></a>
+                                        <a href="#"><span>Deposit</span></a>
+                                        <a href="#"><span>Withdraw</span></a>
+                                        <a href="#"><span>Trade</span></a>
+                                        <a href="#"><span>Convert</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="walletTable"
+                                class="hidden w-full h-auto text-gray-400 pb-2 border px-2 pt-1 border-t-0 justify-between">
+                                <div class="flex flex-col">
+                                    <span>In Order</span>
+                                    <span>Available</span>
+                                    <span>IDEX Value</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span>0.0000</span>
+                                    <span>0.0000</span>
+                                    <span>0.0000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-2">
+                            <div class="flex mt-2 pb-3 w-auto smm:w-650 md:!w-1050">
+                                <div class="flex md:mr-7">
+                                    <img src="./img/idex.jfif" width="45" height="25" alt="idexLogo" />
+                                    <div class="flex flex-col ml-3">
+                                        <span>IDEX</span>
+                                        <span class="text-gray-400">IDEX</span>
+                                    </div>
+                                </div>
+                                <div class="mt-2 text-gray-400 flex flex-nowrap w-full smm:w-auto">
+                                    <div class="flex w-full justify-end mt-1">
+                                        <span class="smm:ml-8 md:!ml-0">15.842.6000</span>
+                                        <span onclick="walletTable(4)" class="smm:hidden pt-1 pl-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-caret-down-fill wallet-toggle-icon"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                            </svg>
+                                        </span>
+                                        <span onclick="walletButnSheet()">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor"
+                                                class="bi bi-three-dots-vertical smm:hidden mt-1 ml-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <span class="md:ml-6 ml-5 hidden smm:inline">15.842.600</span>
+                                    <span class="md:ml-20 ml-20 hidden smm:inline">0.000</span>
+                                    <span class="md:ml-24 ml-24 hidden smm:inline">0.06257827</span>
+                                </div>
+                                <div class="flex w-auto">
+                                    <div onclick="walletButnSheet()" class="hidden smm:inline-block mt-3 ml-7">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor"
+                                            class="bi bi-three-dots-vertical md:hidden text-gray-400"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                        </svg>
+                                    </div>
+                                    <div class="text-[#F6DE2E] gap-x-6 ml-10 mt-2 hidden md:flex">
+                                        <a href="#"><span>Buy</span></a>
+                                        <a href="#"><span>Deposit</span></a>
+                                        <a href="#"><span>Withdraw</span></a>
+                                        <a href="#"><span>Trade</span></a>
+                                        <a href="#"><span>Convert</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="walletTable"
+                                class="hidden w-full h-auto text-gray-400 pb-2 border px-2 pt-1 border-t-0 justify-between">
+                                <div class="flex flex-col">
+                                    <span>In Order</span>
+                                    <span>Available</span>
+                                    <span>IDEX Value</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span>0.0000</span>
+                                    <span>0.0000</span>
+                                    <span>0.0000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="btnSheet" class="hidden fixed bottom-0 left-0 w-full h-full z-[9999]">
+            <div class="w-full h-full fixed top-0 left-0 z-[9999] bg-gray-400 opacity-70"></div>
+            <div class="flex flex-col bg-white rounded-t-xl fixed bottom-0 z-[99999] w-full h-auto p-7 pb-7">
+                <div class="flex justify-between mb-4">
+                    <div><span class="text-xl">BTC</span></div>
+                    <div onclick="walletButnSheet()" class="text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-x float-right" viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </div>
+                </div>
+                <a href="#" class="text-black flex gap-x-2"><span><svg xmlns="http://www.w3.org/2000/svg" width="19"
+                            height="19" fill="currentColor" class="bi bi-cash mt-1" viewBox="0 0 16 16">
+                            <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                            <path
+                                d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z" />
+                        </svg></span><span class="">Buy</span></a>
+                <a href="#" class="text-black flex gap-x-2"><span></span><span class="">Deposit</span></a>
+                <a href="#" class="text-black flex gap-x-2"><span></span><span class="">Withdraw</span></a>
+                <a href="#" class="text-black flex gap-x-2"><span></span><span class="">Trade</span></a>
+                <a href="#" class="text-black flex gap-x-2"><span></span><span class="">Convert</span></a>
+            </div>
+        </div>
+        <!-- end Content -->
+    </div>
+    <script src="./all.js"></script>
+</body>
+
+</html>

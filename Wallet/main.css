@@ -1,0 +1,38 @@
+.active-item {
+    padding-left: 12px;
+    background-color: #F2F3F5;
+    color: black !important;
+    position: relative;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    margin-left: 12px !important;
+}
+
+.active-item:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    right: 0;
+    box-shadow: 43px 34px 0 10px #F2F3F5;
+    z-index: 1;
+}
+
+.active-item:after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+    box-shadow: 43px -34px 0 10px #F2F3F5;
+    z-index: 1;
+}
+.btnSheet{
+    display: flex !important;
+}

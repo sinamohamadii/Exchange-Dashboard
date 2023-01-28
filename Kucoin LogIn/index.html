@@ -1,0 +1,317 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KuCoin: Login</title>
+  <link rel="stylesheet" href="./main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="box-border p-0 m-0">
+  <div class="back-drop w-full h-full fixed bg-transparent hidden z-[998]" onclick="closePhoneDrpdwn()"></div>
+  <div class="grid grid-cols-10 w-full h-full">
+    <div class="col-span-4 h-full hidden md:inline">
+      <img src="https://assets.staticimg.com/cms/media/2EkvUzQ3UpZQY524XNnaF13t9A0pIZ0izrD1xOnSK.png" alt="avatar"
+        class="object-cover w-full h-full" />
+    </div>
+    <div class="col-span-10 md:col-span-6 bg-white">
+      <div class="flex flex-col justify-center items-start p-4 w-full">
+        <div class="self-end block md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </div>
+        <div class="self-end hidden md:block mr-3">
+          <div class="flex flex-row">
+            <div class="">
+              <span class="text-gray-600">Haven’t registered?</span>
+              <a href="#" class="no-underline text-[#24ae8f]">Sign up now</a>
+            </div>
+            <div class="relative">
+              <div class="flex" onmouseover="showLang()">
+                <a class="ml-4" href="#">English</a>
+                <span class="inline">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+              </div>
+              <div class="drop-down absolute w-48 -right-5 z-10 shadow-2xl hidden" onmouseleave="hideLang()">
+                <ul class="w-full h-full bg-white pt-5">
+                  <li class="mb-3 pr-14 py-2 pl-7 hover:bg-gray-200 w-full text-[#24ae8f] flex">
+                    English
+                    <span class="text-[#24ae8f] ml-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                  </li>
+                  <li class="mb-3 pr-14 py-2 pl-4 hover:bg-gray-200 hover:text-[#24ae8f] w-full">
+                    Persian
+                  </li>
+                  <li class="mb-3 pr-14 py-2 pl-4 hover:bg-gray-200 hover:text-[#24ae8f] w-full">
+                    German
+                  </li>
+                  <li class="mb-3 pr-14 py-2 pl-4 hover:bg-gray-200 hover:text-[#24ae8f] w-full">
+                    French
+                  </li>
+                  <li class="mb-3 pr-14 py-2 pl-4 hover:bg-gray-200 hover:text-[#24ae8f] w-full">
+                    Poland
+                  </li>
+                  <li class="mb-3 pr-14 py-2 pl-4 hover:bg-gray-200 hover:text-[#24ae8f] w-full">
+                    Swidish
+                  </li>
+                  <li class="mb-3 pr-14 py-2 pl-4 hover:bg-gray-200 hover:text-[#24ae8f] w-full">
+                    USA
+                  </li>
+                  <li class="mb-3 pr-14 py-2 pl-4 hover:bg-gray-200 hover:text-[#24ae8f] w-full">
+                    Chinesse
+                  </li>
+                  <li class="pb-3 pr-14 pt-2 pl-4 hover:bg-gray-200 hover:text-[#24ae8f] w-full">
+                    Japenesse
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:px-8 lg:px-28">
+          <p class="text-4xl mt-5">Log In</p>
+          <ul class="flex mt-10">
+            <li class="form-button border-r pr-2 text-gray-500 cursor-pointer hover:text-[#24ae8f]"
+              onclick="formChanger(1)">
+              Mobile
+            </li>
+            <li class="form-button border-r pr-2 ml-2 text-[#24ae8f] cursor-pointer hover:text-[#24ae8f]"
+              onclick="formChanger(2)">
+              Email
+            </li>
+            <li class="form-button ml-2 text-gray-500 cursor-pointer hover:text-[#24ae8f]" onclick="formChanger(3)">
+              with QR Code</li>
+          </ul>
+          <form class="my-7 w-full">
+            <div class="content-form hidden flex-col gap-y-4">
+              <div class="flex flex-col-reverse relative">
+                <input type="text"
+                  class="phone-input hover:outline outline-1 outline-gray-200 w-full pl-20 rounded-sm h-12 bg-gray-100 focus:outline-none focus:border focus:border-[#24ae8f]" />
+                <div class="inline-block w-20 absolute top-11">
+                  <div class="flex text-gray-600 cursor-pointer" onclick="openPhoneDrpdwn()">
+                    <span class="ml-2">+1</span>
+                    <span class="mx-3 border-r pr-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="country-arrow rotate-0 h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="country-dropdown absolute top-10 hidden z-[999] bg-white shadow-2xl p-2 w-52 h-56 overflow-y-scroll" data-toggle="hide">
+                    <div class="relative">
+                      <span class="absolute top-2 left-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                      </span>
+                      <input placeholder="Search" type="text"
+                        class="w-full rounded-sm bg-gray-100 pl-7 h-10 focus:outline-[#24ae8f]" />
+                    </div>
+                    <ul>
+                      <li class="p-3 flex justify-between hover:text-[#24ae8f] hover:bg-gray-200">
+                        <div class="flex gap-2">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                              stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                            </svg>
+                          </span>
+                          Country
+                        </div>
+                        +1
+                      </li>
+                      <li class="p-3 flex justify-between hover:text-[#24ae8f] hover:bg-gray-200">
+                        <div class="flex gap-2">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                              stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                            </svg>
+                          </span>
+                          Country
+                        </div>
+                        +25
+                      </li>
+                      <li class="p-3 flex justify-between hover:text-[#24ae8f] hover:bg-gray-200">
+                        <div class="flex gap-2">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                              stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                            </svg>
+                          </span>
+                          Country
+                        </div>
+                        +98
+                      </li>
+                      <li class="p-3 flex justify-between hover:text-[#24ae8f] hover:bg-gray-200">
+                        <div class="flex gap-2">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                              stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                            </svg>
+                          </span>
+                          Country
+                        </div>
+                        +56
+                      </li>
+                      <li class="p-3 flex justify-between hover:text-[#24ae8f] hover:bg-gray-200">
+                        <div class="flex gap-2">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                              stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                            </svg>
+                          </span>
+                          Country
+                        </div>
+                        +45
+                      </li>
+                      <li class="p-3 flex justify-between hover:text-[#24ae8f] hover:bg-gray-200">
+                        <div class="flex gap-2">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                              stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                            </svg>
+                          </span>
+                          Country
+                        </div>
+                        +32
+                      </li>
+                      <li class="p-3 flex justify-between hover:text-[#24ae8f] hover:bg-gray-200">
+                        <div class="flex gap-2">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                              stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                            </svg>
+                          </span>
+                          Country
+                        </div>
+                        +78
+                      </li>
+                      <li class="p-3 flex justify-between hover:text-[#24ae8f] hover:bg-gray-200">
+                        <div class="flex gap-2">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                              stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                            </svg>
+                          </span>
+                          Country
+                        </div>
+                        +98
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <label for="phone-input" class="phone-input-label text-sm block text-gray-600 mb-3">
+                  Phone Number
+                </label>
+              </div>
+              <div class="flex flex-col-reverse relative">
+                <input type="password"
+                  class="password-input hover:outline outline-1 outline-gray-200 w-full pl-4 rounded-sm h-12 bg-gray-100 focus:outline-none focus:border focus:border-[#24ae8f]" />
+                <label for="password-input" class="password-input-label text-sm block text-gray-600 mb-3">
+                  Login Password
+                </label>
+                <button class="absolute right-5 bottom-4 text-[#24ae8f]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+                    class="bi bi-eye-slash" viewBox="0 0 16 16">
+                    <path
+                      d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+                    <path
+                      d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+                    <path
+                      d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4">
+                <button class="h-12 w-full bg-[#24ae8f] text-white mt-5 rounded-sm">
+                  Log In
+                </button>
+                <button class="text-sm text-gray-600 mt-2 float-right">
+                  Forgot Password?
+                </button>
+              </div>
+            </div>
+            <div class="content-form flex flex-col gap-y-4">
+              <div class="flex flex-col-reverse">
+                <input type="text"
+                  class="email-input hover:outline outline-1 outline-gray-200 w-full pl-4 rounded-sm h-12 bg-gray-100 focus:outline-none focus:border focus:border-[#24ae8f]" />
+                <label for="email-input" class="email-input-label text-sm block text-gray-600 mb-3">
+                  Email/Sub-Account
+                </label>
+              </div>
+              <div class="flex flex-col-reverse relative">
+                <input type="password"
+                  class="password-input hover:outline outline-1 outline-gray-200 w-full pl-4 rounded-sm h-12 bg-gray-100 focus:outline-none focus:border focus:border-[#24ae8f]" />
+                <label for="password-input" class="password-input-label text-sm block text-gray-600 mb-3">
+                  Login Password
+                </label>
+                <button class="absolute right-5 bottom-4 text-[#24ae8f]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+                    class="bi bi-eye-slash" viewBox="0 0 16 16">
+                    <path
+                      d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+                    <path
+                      d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+                    <path
+                      d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-4">
+                <button class="h-12 w-full bg-[#24ae8f] text-white mt-5 rounded-sm">
+                  Log In
+                </button>
+                <button class="text-sm text-gray-600 mt-2 float-right">
+                  Forgot Password?
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="content-form w-full hidden flex-col">
+            <div class="bg-gray-200 p-4 inline-block mb-8"><img width="250px" height="250px"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/QR_Code_Example.svg/1024px-QR_Code_Example.svg.png"
+                alt="avatar">
+            </div>
+            <p class="text-gray-500 flex"><span class="hover:text-[#24ae8f]"><svg xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                </svg></span>Open KuCoin App and scan the QR code to log in</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./all.js"></script>
+</body>
+
+</html>

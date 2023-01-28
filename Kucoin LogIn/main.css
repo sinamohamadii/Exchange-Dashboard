@@ -1,0 +1,11 @@
+.email-input:focus + .email-input-label {
+    color: #24ae8f !important;
+}
+
+.phone-input:focus + .phone-input-label {
+    color: #24ae8f !important;
+}
+
+.password-input:focus + .password-input-label {
+    color: #24ae8f !important;
+}

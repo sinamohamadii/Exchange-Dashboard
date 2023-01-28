@@ -1,0 +1,73 @@
+.toggle-menu-option:hover .arrow-toggle-menu-icon {
+    display: inline !important;
+}
+
+.arrow-toggle-menu-icon {
+    animation: goLeft 0.5s ease forwards;
+}
+
+@keyframes goLeft {
+    from {
+        margin-right: 0;
+    }
+
+    to {
+        margin-right: -5px;
+        color: #2dbd96;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .navbar-item:hover div.nav-drop-down {
+        display: flex !important;
+    }
+}
+
+@media screen and (min-width:844px) {
+    .first-nav-drop-down {
+        left: 0 !important;
+    }
+}
+
+.navbar-item:hover .bi-caret-down-fill {
+    transform: rotate(180deg);
+}
+
+.side-bar {
+    transition: all 0.5s linear;
+}
+
+.navbar-active-item {
+    border-bottom: 2px solid #2dbd96;
+    color: #2dbd96 !important;
+}
+
+.overflow-custom {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.overflow-custom::-webkit-scrollbar {
+    display: none;
+}
+
+.calc-container:hover .calc-drop-down {
+    display: flex !important;
+}
+
+.calc-container:hover .calc-arrow {
+    transform: rotate(90deg);
+    color: #2dbd96;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1130px) {
+    .left-div-table{
+        width: 1037px !important;
+    }
+    .right-div-table{
+        box-shadow:  -6px 0px 12px -10px rgb(199, 199, 199);
+    }
+
+}

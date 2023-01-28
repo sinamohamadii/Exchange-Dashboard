@@ -1,0 +1,2793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Account</title>
+  <link rel="stylesheet" href="./main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./tailwindconfig.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+  <main class="max-w-screen h-auto overflow-x-hidden">
+    <div class="back-drop h-full w-full top-0 left-0 hidden bg-gray-700 opacity-70 z-[1000]" onclick="closeNavBar()"></div>
+    <nav class="w-full h-20 bg-white fixed top-0 left-0 z-[1200]">
+      <div class="w-full h-full px-4 flex justify-between items-center">
+        <div class="w-auto h-full flex gap-x-3">
+          <img width="122px" src="https://assets.staticimg.com/cms/media/1lB3PkckFDyfxz6VudCEACBeRRBi6sQQ7DDjz0yWM.svg" alt="Logo">
+          <div class="hidden w-auto h-full md:flex gap-x-3">
+            <div class="navbar-item h-full flex gap-x-1 justify-center items-center relative">
+              <div class="flex gap-x-1 cursor-pointer items-center">
+                <span class="text-black hover:text-gray-600 text-lg">
+                  <svg class="text-black hover:text-gray-600 moreIcon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" fill="currentColor"><defs><style></style></defs><path d="M0 0h236.308v236.308H0V0zm393.846 0h236.308v236.308H393.846V0zM1024 0H787.692v236.308H1024V0zM0 393.846h236.308v236.308H0V393.846zm630.154 0H393.846v236.308h236.308V393.846zm157.538 0H1024v236.308H787.692V393.846zM236.308 787.692H0V1024h236.308V787.692zm157.538 0h236.308V1024H393.846V787.692zm630.154 0H787.692V1024H1024V787.692z"></path></svg>
+                </span>
+                <span class="text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="nav-drop-down first-nav-drop-down rounded-md overflow-hidden hidden w-[800px] h-[372px] absolute top-20 -left-[150px] z-50 bg-white shadow-xl ">
+                <div class="flex flex-col w-1/2 py-3 h-full">
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/5 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/5 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/5 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/5 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/5 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col w-1/2 py-3 h-full">
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/5 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/5 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/5 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/5 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/5 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item flex gap-x-1 justify-center items-center relative">
+              <div class="flex gap-x-1 cursor-pointer items-center">
+                <span class="text-black hover:text-gray-600 text-md truncate">Buy Crypto</span>
+                <span class="text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="nav-drop-down rounded-md overflow-hidden hidden w-[400px] h-[223px] absolute top-20 left-0 z-50 bg-white shadow-xl ">
+                <div class="flex flex-col w-full py-3 h-full">
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/3 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/3 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/3 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cursor-pointer flex justify-center items-center">
+              <span class="text-black hover:text-gray-600 text-md">Markets</span>
+            </div>
+            <div class="navbar-item flex gap-x-1 justify-center items-center relative">
+              <div class="flex gap-x-1 cursor-pointer items-center">
+                <span class="text-black hover:text-gray-600 text-md">Trade</span>
+                <span class="text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="nav-drop-down rounded-md overflow-hidden hidden w-[400px] h-[223px] absolute top-20 left-0 z-50 bg-white shadow-xl ">
+                <div class="flex flex-col w-full py-3 h-full">
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/3 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/3 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/3 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item flex gap-x-1 justify-center items-center relative">
+              <div class="flex gap-x-1 cursor-pointer items-center">
+                <span class="text-black hover:text-gray-600 text-md">Derivatives</span>
+                <span class="text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="nav-drop-down rounded-md overflow-hidden hidden w-[400px] h-[298px] absolute top-20 left-0 z-50 bg-white shadow-xl ">
+                <div class="flex flex-col w-full py-3 h-full">
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/4 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/4 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/4 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/4 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item flex gap-x-1 justify-center items-center relative">
+              <div class="flex gap-x-1 cursor-pointer items-center">
+                <span class="text-black hover:text-gray-600 text-md">Earn</span>
+                <span class="text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="nav-drop-down rounded-md overflow-hidden hidden w-[400px] h-[520px] absolute top-20 left-0 z-50 bg-white shadow-xl ">
+                <div class="flex flex-col w-full py-3 h-full">
+                  <div class="toggle-menu-option px-5 py-3 w-full h-[14.3%] hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-[14.3%] hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-[14.3%] hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-[14.3%] hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-[14.3%] hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-[14.3%] hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-[14.3%] hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item flex gap-x-1 justify-center items-center relative">
+              <div class="flex gap-x-1 cursor-pointer items-center">
+                <span class="text-black hover:text-gray-600 text-md">NFT</span>
+                <span class="text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="nav-drop-down rounded-md overflow-hidden hidden w-[400px] h-[149px] absolute top-20 left-0 z-50 bg-white shadow-xl ">
+                <div class="flex flex-col w-full py-3 h-full">
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/2 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="toggle-menu-option px-5 py-3 w-full h-1/2 hover:bg-gray-100 cursor-pointer flex justify-between">
+                    <div class="flex h-full gap-x-2">
+                      <div class="flex justify-center items-center">
+                        <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                      </div>
+                      <div class="flex flex-col justify-center items-start">
+                        <span class="text-black">API Services</span>
+                        <span class="text-gray-500 text-sm">Exclusive Perks For API Users</span>
+                      </div>
+                    </div>
+                    <div class="h-full flex justify-center items-center">
+                      <span class="arrow-toggle-menu-icon hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>          
+          </div>
+        </div>
+        <div class="w-auto h-full flex lg:gap-x-2 gap-x-1 items-center">
+          <div class="relative" onclick="navSideBarChange(1)">
+            <span class="rounded-full w-6 h-6 bg-[#24ae8f] text-gray-200 text-sm absolute -top-3 -left-3 flex justify-center items-center cursor-pointer">1
+            </span>
+            <button class="w-9 h-9 bg-[#f4f5f6] rounded-md flex justify-center items-center text-gray-600 hover:text-gray-400 hover:border border-1 border-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="navbar-item relative h-full flex items-center">
+            <button class="hidden w-9 h-9 bg-[#f4f5f6] rounded-md lg:flex justify-center items-center text-gray-600 hover:text-gray-400 hover:border border-1 border-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="45" fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
+                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+            </button>
+            <div class="nav-drop-down rounded-md overflow-hidden hidden w-auto h-auto absolute top-20 -left-20 z-50 bg-white shadow-xl">
+              <div class="w-[300px] flex flex-col py-3 h-full">
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-item relative h-full flex items-center">
+            <button class="hidden w-9 h-9 bg-[#f4f5f6] rounded-md lg:flex justify-center items-center text-gray-600 hover:text-gray-400 hover:border border-1 border-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
+                <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+              </svg>
+            </button>
+            <div class="nav-drop-down rounded-md overflow-hidden hidden w-auto h-auto absolute top-20 -left-24 z-50 bg-white shadow-xl">
+              <div class="w-[300px] flex flex-col py-3 h-full">
+                <div class="toggle-menu-option px-5 py-3 w-full h-auto hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex flex-col h-full gap-x-2">
+                    <div class="flex items-center gap-x-2">
+                      <span class="text-gray-400">Overview</span>
+                      <span class="mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                          <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+                          <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+                          <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                      <span class="text-gray-800 text-lg mt-1">***</span>
+                      <span class="text-gray-400">
+                        BTC
+                      </span>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                      <span class="text-gray-400 mt-1">***</span>
+                      <span class="text-gray-400">
+                        USDT
+                      </span>
+                    </div>
+                  </div>
+                  <div class="h-20 flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full gap-x-2">
+                    <div class="flex justify-center items-center">
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </div>
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div class="toggle-menu-option w-full h-12 cursor-pointer flex">
+                  <div class="hover:bg-gray-100 flex w-1/2 px-2 h-12 justify-center items-center">
+                    <span>
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </span>
+                    <span>Visa Card</span>
+                  </div>
+                  <div class="hover:bg-gray-100 h-12 w-1/2 px-2 flex justify-center items-center">
+                    <span>
+                      <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                    </span>
+                    <span>Master Card</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-item relative h-full flex items-center">
+            <button onclick="navSideBarChange(2)" class="w-9 h-9 rounded-full border border-1 border-gray-600 flex justify-center items-center hover:text-gray-600 hover:border border-1 hover:border-gray-400">SI</button>
+            <div class="nav-drop-down rounded-md overflow-hidden hidden w-auto h-auto absolute top-20 -left-36 z-50 bg-white shadow-xl">
+              <div class="w-[300px] flex flex-col py-3 h-full">
+                <div class="toggle-menu-option px-5 py-3 w-full h-auto hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex flex-col w-auto h-full gap-y-2">
+                    <div class="flex items-center gap-x-2">
+                      <span class="text-gray-400">Si**5@**.com</span>
+                      <span class="text-orange-500 bg-orange-100 text-sm p-1 mt-1">
+                        Unverified
+                      </span>
+                    </div>
+                    <div class="flex w-28 p-1 items-center gap-x-2 text-gray-500 bg-gray-200 rounded-lg">
+                      <span class="text-gray-800 text-xs">UID: 154687354</span>
+                      <span class="text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                          <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                          <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="h-20 flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full">
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-gray-500 text-sm">Taker: 0.1%   maker: 0.2%</span>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full">
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full">
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full">
+                    <div class="flex flex-col justify-center items-start relative">
+                      <span class="text-black"><div class="inline-block w-2 h-2 bg-orange-400 rounded-full absolute top-[10px] -left-3"></div> API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full">
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full">
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="flex h-full">
+                    <div class="flex flex-col justify-center items-start">
+                      <span class="text-black">API Services</span>
+                    </div>
+                  </div>
+                  <div class="h-full flex justify-center items-center">
+                    <span class="arrow-toggle-menu-icon hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                  <div class="w-full h-full flex justify-center items-center">Log Out</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button onclick="navSideBarChange(3)" class="flex lg:hidden text-gray-600 justify-between items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </button>
+          <button class="hidden w-9 h-9 bg-[#f4f5f6] rounded-md lg:flex justify-center items-center text-gray-600 hover:text-gray-400 hover:border border-1 border-gray-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+            </svg>
+          </button>
+          <button class="hidden w-9 h-9 bg-[#f4f5f6] rounded-md lg:flex justify-center items-center text-gray-600 hover:text-gray-400 hover:border border-1 border-gray-200">
+            USD
+          </button>
+          <div class="navbar-item relative h-full flex items-center">
+            <button class="hidden w-auto h-7 p-1 mt-1 border border-gray-600 rounded-md lg:flex justify-center items-center text-gray-600 hover:text-gray-500 hover:border border-1 hover:border-gray-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+              </svg>
+            </button>
+            <div class="nav-drop-down rounded-md overflow-hidden hidden w-auto h-auto absolute top-20 -left-44 z-50 bg-white shadow-xl ">
+              <div class="w-[200px] flex flex-col py-3 h-full px-3 gap-y-3">
+                <div class="w-full h-auto text-sm">Scan QR Code to Download App</div>
+                <div class="w-full h-auto">
+                  <img src="./img/qrcode.png" alt="qrcode">
+                </div>
+                <button class="w-full h-auto text-white bg-[#2dbd96] flex justify-center items-center gap-x-2 rounded-sm">
+                  <span>View More</span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                      <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                      <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="side-bar h-screen w-72 bg-gray-200 fixed top-0 -right-full z-[1100] shadow-xl shadow-gray-400 border flex flex-col justify-between" data-toggle="hide">
+      <div>
+        <div class="w-auto relative h-auto">
+          <button onclick="navSideBarChange(1)" class="sidebar-close-btn absolute -top-1 left-11 transition-all duration-300 shadow-l shadow-gray-400 border-l border-b flex justify-center items-center bg-gray-200 p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg>
+          </button>
+        </div>
+        <div class=" p-4 w-full h-auto flex flex-col gap-y-2">
+          <div class="flex justify-between items-center">
+            <span class="text-2xl text-gray-700">Today</span>
+            <button class="rounded-full bg-gray-400 hover:bg-gray-500 transition-all duration-75 text-white w-5 h-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="mx-auto bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex gap-x-3 items-center justify-center relative">
+            <div class="w-2 h-2 rounded-full bg-[#ff5f73] absolute -left-3 cursor-pointer"></div>
+            <div class="flex flex-col rounded-md border border-1 border-gray-300 overflow-hidden w-64 cursor-pointer hover:shadow-xl transition-all duration-200">
+              <div class="flex justify-between bg-gray-100 py-1 px-3">
+                <div class="flex gap-x-1">
+                  <span class="bg-orange-400 rounded-md p-1 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                      <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                      <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                    </svg>
+                  </span>
+                  <span class="text-sm text-gray-500">Account</span>
+                </div>
+                <div class="text-sm text-gray-500">11:17</div>
+              </div>
+              <div class="bg-white">
+                <p class="text-sm text-gray-500 p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex divide-x-2 bg-white border border-x-0 py-1 border-px border-gray-300">
+        <button class="w-1/2 h-auto flex justify-center items-center py-2 text-md text-gray-500">All read</button>
+        <button class="w-1/2 h-auto flex justify-center items-center py-2 text-md text-gray-500">Delete all</button>
+      </div>
+    </div>
+    <div class="side-bar md:hidden h-screen w-72 overflow-y-auto bg-white fixed top-0 -right-full z-[1100] shadow-xl shadow-gray-400 border flex flex-col justify-between" data-toggle="hide">
+      <div class="relative">
+        <div class="w-full h-auto bg-white absolute right-0 z-[1200]">
+          <button onclick="navSideBarChange(2)" class="flex justify-center items-center p-4 float-right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="rounded-md overflow-hidden w-auto h-auto bg-white mt-10">
+          <div class="w-full flex flex-col py-3 h-full">
+            <div class="toggle-menu-option px-5 py-3 w-full h-auto hover:bg-gray-100 cursor-pointer flex justify-between">
+              <div class="flex flex-col w-auto h-full gap-y-2">
+                <div class="flex items-center gap-x-2">
+                  <span class="text-gray-700 text-lg font-semibold">Si**5@**.com</span>
+                </div>
+                <div class="flex w-28 p-1 items-center gap-x-2 text-gray-500 bg-gray-200 rounded-lg">
+                  <span class="text-gray-800 text-xs">UID: 154687354</span>
+                  <span class="text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="h-20 flex justify-center items-center">
+                <span class="arrow-toggle-menu-icon hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <hr class="my-3" />
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+              <div class="flex h-full">
+                <div class="flex flex-col justify-center items-start">
+                  <span class="text-gray-500 text-sm"></span>
+                </div>
+              </div>
+            </div>
+            <hr class="my-3" />
+            <div x-data="{ open: false }">
+              <div @click="open = ! open" onclick="rotateArrow(1)" data-toggle="hide" class="sidebar-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black">Orders</span>
+                </div>
+                <div class="h-full flex justify-center items-center">
+                  <span class="sidebar-menu-arrow rotate-0 transition-all duration-75 ease-in-out text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div x-show="open" @click.outside="open = false">
+                <div class="rounded-md overflow-hidden w-auto h-auto">
+                  <div class="w-full flex flex-col py-3 h-full">
+                    <div class="px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full gap-x-2">
+                        <div class="flex justify-center items-center">
+                          <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                        </div>
+                        <div class="flex flex-col justify-center items-start">
+                          <span class="text-black">API Services</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full gap-x-2">
+                        <div class="flex justify-center items-center">
+                          <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                        </div>
+                        <div class="flex flex-col justify-center items-start">
+                          <span class="text-black">API Services</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full gap-x-2">
+                        <div class="flex justify-center items-center">
+                          <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                        </div>
+                        <div class="flex flex-col justify-center items-start">
+                          <span class="text-black">API Services</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full gap-x-2">
+                        <div class="flex justify-center items-center">
+                          <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                        </div>
+                        <div class="flex flex-col justify-center items-start">
+                          <span class="text-black">API Services</span>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="my-3" />
+                    <div class="px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full gap-x-2">
+                        <div class="flex justify-center items-center">
+                          <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                        </div>
+                        <div class="flex flex-col justify-center items-start">
+                          <span class="text-black">API Services</span>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="my-3" />
+                    <div class="px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full gap-x-2">
+                        <div class="flex justify-center items-center">
+                          <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                        </div>
+                        <div class="flex flex-col justify-center items-start">
+                          <span class="text-black">API Services</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full gap-x-2">
+                        <div class="flex justify-center items-center">
+                          <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                        </div>
+                        <div class="flex flex-col justify-center items-start">
+                          <span class="text-black">API Services</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full gap-x-2">
+                        <div class="flex justify-center items-center">
+                          <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                        </div>
+                        <div class="flex flex-col justify-center items-start">
+                          <span class="text-black">API Services</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div x-data="{ open: false }">
+              <div @click="open = ! open" onclick="rotateArrow(2)" data-toggle="hide" class="sidebar-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black">Assets</span>
+                </div>
+                <div class="h-full flex justify-center items-center">
+                  <span class="sidebar-menu-arrow rotate-0 transition-all duration-75 ease-in-out text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div x-show="open" @click.outside="open = false">
+                <div class="rounded-md overflow-hidden w-auto h-auto">
+                  <div class="w-full flex flex-col py-3 h-full">
+                    <div class="w-auto h-auto">
+                      <div class="w-full flex flex-col py-3 h-full">
+                        <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                          <div class="flex h-full gap-x-2">
+                            <div class="flex justify-center items-center">
+                              <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                            </div>
+                            <div class="flex flex-col justify-center items-start">
+                              <span class="text-black">API Services</span>
+                            </div>
+                          </div>
+                          <div class="h-full flex justify-center items-center">
+                            <span class="arrow-toggle-menu-icon hidden">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                          <div class="flex h-full gap-x-2">
+                            <div class="flex justify-center items-center">
+                              <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                            </div>
+                            <div class="flex flex-col justify-center items-start">
+                              <span class="text-black">API Services</span>
+                            </div>
+                          </div>
+                          <div class="h-full flex justify-center items-center">
+                            <span class="arrow-toggle-menu-icon hidden">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                          <div class="flex h-full gap-x-2">
+                            <div class="flex justify-center items-center">
+                              <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                            </div>
+                            <div class="flex flex-col justify-center items-start">
+                              <span class="text-black">API Services</span>
+                            </div>
+                          </div>
+                          <div class="h-full flex justify-center items-center">
+                            <span class="arrow-toggle-menu-icon hidden">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                          <div class="flex h-full gap-x-2">
+                            <div class="flex justify-center items-center">
+                              <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                            </div>
+                            <div class="flex flex-col justify-center items-start">
+                              <span class="text-black">API Services</span>
+                            </div>
+                          </div>
+                          <div class="h-full flex justify-center items-center">
+                            <span class="arrow-toggle-menu-icon hidden">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                          <div class="flex h-full gap-x-2">
+                            <div class="flex justify-center items-center">
+                              <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                            </div>
+                            <div class="flex flex-col justify-center items-start">
+                              <span class="text-black">API Services</span>
+                            </div>
+                          </div>
+                          <div class="h-full flex justify-center items-center">
+                            <span class="arrow-toggle-menu-icon hidden">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                        <hr class="my-3" />
+                        <div class="toggle-menu-option w-full h-12 cursor-pointer flex">
+                          <div class="hover:bg-gray-100 flex w-1/2 px-2 h-12 justify-center items-center">
+                            <span>
+                              <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                            </span>
+                            <span>Visa Card</span>
+                          </div>
+                          <div class="hover:bg-gray-100 h-12 w-1/2 px-2 flex justify-center items-center">
+                            <span>
+                              <img src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                            </span>
+                            <span>Master Card</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-3" />
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+              <div class="flex h-full">
+                <div class="flex flex-col justify-center items-start">
+                  <span class="text-black">API Services</span>
+                </div>
+              </div>
+              <div class="h-full flex justify-center items-center">
+                <span class="arrow-toggle-menu-icon hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+              <div class="flex h-full">
+                <div class="flex flex-col justify-center items-start">
+                  <span class="text-black">API Services</span>
+                </div>
+              </div>
+              <div class="h-full flex justify-center items-center">
+                <span class="arrow-toggle-menu-icon hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+              <div class="flex h-full">
+                <div class="flex flex-col justify-center items-start relative">
+                  <span class="text-black"><div class="inline-block w-2 h-2 bg-orange-400 rounded-full absolute top-[10px] -left-3"></div> API Services</span>
+                </div>
+              </div>
+              <div class="h-full flex justify-center items-center">
+                <span class="arrow-toggle-menu-icon hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+              <div class="flex h-full">
+                <div class="flex flex-col justify-center items-start">
+                  <span class="text-black">API Services</span>
+                </div>
+              </div>
+              <div class="h-full flex justify-center items-center">
+                <span class="arrow-toggle-menu-icon hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+              <div class="flex h-full">
+                <div class="flex flex-col justify-center items-start">
+                  <span class="text-black">API Services</span>
+                </div>
+              </div>
+              <div class="h-full flex justify-center items-center">
+                <span class="arrow-toggle-menu-icon hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <hr class="my-3" />
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+              <div class="flex h-full">
+                <div class="flex flex-col justify-center items-start">
+                  <span class="text-black">API Services</span>
+                </div>
+              </div>
+              <div class="h-full flex justify-center items-center">
+                <span class="arrow-toggle-menu-icon hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <hr class="my-3" />
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+              <div class="w-full h-full flex justify-center items-center">Log Out</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="side-bar lg:hidden h-screen w-72 overflow-y-auto bg-white fixed top-0 -right-full z-[1100] shadow-xl shadow-gray-400 border flex flex-col justify-between" data-toggle="hide">
+      <div class="relative">
+        <div class="w-full h-auto bg-white absolute right-0 z-[1200]">
+          <button onclick="navSideBarChange(3)" class="flex justify-center items-center p-4 float-right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="w-auto h-auto mt-10">
+          <div class="w-full flex flex-col py-3 h-full">
+            <div x-data="{ open: false }" class="md:hidden">
+              <div @click="open = ! open" onclick="rotateArrow(3)" data-toggle="hide" class="sidebar-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black">Buy Crypto</span>
+                </div>
+                <div class="h-full flex justify-center items-center">
+                  <span class="sidebar-menu-arrow rotate-0 transition-all duration-75 ease-in-out text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div x-show="open" @click.outside="open = false">
+                <div class="rounded-md overflow-hidden w-auto h-auto">
+                  <div class="w-full flex flex-col py-3 h-full">
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 md:hidden hover:bg-gray-100 cursor-pointer">Market</div>
+            <div x-data="{ open: false }" class="md:hidden">
+              <div @click="open = ! open" onclick="rotateArrow(4)" data-toggle="hide" class="sidebar-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black">Trade</span>
+                </div>
+                <div class="h-full flex justify-center items-center">
+                  <span class="sidebar-menu-arrow rotate-0 transition-all duration-75 ease-in-out text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div x-show="open" @click.outside="open = false">
+                <div class="rounded-md overflow-hidden w-auto h-auto">
+                  <div class="w-full flex flex-col py-3 h-full">
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div x-data="{ open: false }" class="md:hidden">
+              <div @click="open = ! open" onclick="rotateArrow(5)" data-toggle="hide" class="sidebar-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black">Derivatives</span>
+                </div>
+                <div class="h-full flex justify-center items-center">
+                  <span class="sidebar-menu-arrow rotate-0 transition-all duration-75 ease-in-out text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div x-show="open" @click.outside="open = false">
+                <div class="rounded-md overflow-hidden w-auto h-auto">
+                  <div class="w-full flex flex-col py-3 h-full">
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div x-data="{ open: false }" class="md:hidden">
+              <div @click="open = ! open" onclick="rotateArrow(6)" data-toggle="hide" class="sidebar-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black">Earn</span>
+                </div>
+                <div class="h-full flex justify-center items-center">
+                  <span class="sidebar-menu-arrow rotate-0 transition-all duration-75 ease-in-out text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div x-show="open" @click.outside="open = false">
+                <div class="rounded-md overflow-hidden w-auto h-auto">
+                  <div class="w-full flex flex-col py-3 h-full">
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div x-data="{ open: false }" class="md:hidden">
+              <div @click="open = ! open" onclick="rotateArrow(7)" data-toggle="hide" class="sidebar-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black">NFT</span>
+                </div>
+                <div class="h-full flex justify-center items-center">
+                  <span class="sidebar-menu-arrow rotate-0 transition-all duration-75 ease-in-out text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div x-show="open" @click.outside="open = false">
+                <div class="rounded-md overflow-hidden w-auto h-auto">
+                  <div class="w-full flex flex-col py-3 h-full">
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between">
+                      <div class="flex h-full">
+                        <div class="flex gap-x-2 justify-center items-center">
+                          <span class="">
+                            <img width="23px" height="23px" src="https://assets.staticimg.com/cms/media/6JnBnnikfeEEzyacLBiHPK57Jt39uzyqgf6NKE5GU.svg" alt="icon">
+                          </span>
+                          <span class="text-black text-sm">API Services</span>
+                        </div>
+                      </div>
+                      <div class="h-full flex justify-center items-center">
+                        <span class="arrow-toggle-menu-icon hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-3 md:hidden" />
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer">Market</div>
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between"><span>Market</span><span class="text-gray-400">English</span>
+            </div>
+            <div class="toggle-menu-option px-5 py-3 w-full h-12 hover:bg-gray-100 cursor-pointer flex justify-between"><span>Market</span><span class="text-gray-400">USD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-auto h-auto relative">
+      <div class="flex md:justify-between w-full h-16 overflow-custom bg-[#f4f5f6] mt-20 px-6 md:px-0 lg:px-12 text-lg">
+        <button class="h-full flex justify-center items-center md:hidden absolute top-0 left-0 bg-[#f4f5f6]" onclick="scrolltag(0)">
+          <svg class="left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+            </path>
+          </svg>
+        </button>
+        <div class="flex">
+          <a href="#" class="w-auto h-full flex justify-start items-center px-5 text-gray-500">hello</a>
+          <a href="#" class="w-auto h-full flex justify-start items-center px-5 text-gray-500 navbar-active-item">hello</a>
+          <a href="#" class="w-auto h-full flex justify-start items-center px-5 text-gray-500">hello</a>
+          <a href="#" class="w-auto h-full flex justify-start items-center px-5 text-gray-500">hello</a>
+          <a href="#" class="w-auto h-full flex justify-start items-center px-5 text-gray-500">hello</a>
+        </div>
+        <div class="flex">
+          <a href="#" class="w-auto h-full flex justify-start items-center px-5 text-gray-500">hello</a>
+          <a href="#" class="w-auto h-full flex justify-start items-center px-5 text-gray-500">hello</a>
+          <a href="#" class="w-34 h-full flex flex-col justify-start items-center text-gray-500">
+            <span>hello</span>
+            <span class="w-[97px]">(hello there)</span>
+          </a>
+          <a href="#" class="w-auto h-full flex justify-start items-center px-5 text-gray-500">hello</a>
+        </div>
+        <button class="h-full flex justify-center items-center rotate-180 md:hidden absolute top-0 -right-[2px] bg-[#f4f5f6]" onclick="scrolltag(1)">
+          <svg class="left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="max-w-screen h-auto  m-5 lg:mx-12 flex flex-col gap-y-10">
+      <div class="w-full h-auto flex flex-col gap-y-4">
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl font-semibold">Main Account</h1>
+          <button class="border py-1 px-2 rounded text-[#2dbd96] hover:bg-gray-100">Account Details</button>
+        </div>
+        <div class="w-full h-auto flex gap-x-1 items-end">
+          <span class="text-xl text-black">0.00</span>
+          <span class="text-sm text-gray-500">BTC≈ 0.00USD</span>
+          <span class="text-sm text-[#2dbd96]">(Loans: <abbr>0.00 BTC</abbr>)</span>
+        </div>
+        <div class="w-full h-auto flex gap-x-1 items-center">
+          <button class="text-md text-gray-500">Yesterday's PNL</button>
+          <button class="text-sm text-[#2dbd96]">0.00USD/+0.00%</button>
+          <button class="text-gray-500">
+            <svg class="rotate-180 left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+              </path>
+            </svg>
+          </button>
+        </div>
+        <div class="w-full h-auto flex flex-wrap gap-3">
+          <div class="relative w-full max-w-[388px]">
+            <input type="text" placeholder="Search" class="transition-all duration-75 ease-in w-full rounded h-10 pl-8 bg-gray-100 hover:bg-gray-200 focus:!outline-none focus:border focus:border-[#2dbd96]">
+            <span class="absolute left-2 top-3 text-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            </span>
+          </div>
+          <div class="flex gap-2 items-center">
+            <input type="checkbox" class="mt-1 accent-[#2dbd96]" name="" id="">
+            <span class="text-md">Hide small balances</span>
+          </div>
+          <div class="flex gap-2 items-center">
+            <input type="checkbox" class="mt-1 accent-[#2dbd96]" name="" id="">
+            <span class="text-md">Staking coins</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative w-full h-auto flex flex-col">
+        <div class="w-full h-auto flex flex-col overflow-x-scroll">
+          <div class="sticky top-0 h-14 left-div-table bg-gray-100 flex w-full border-b border-gray-300 items-center pl-4">
+            <div class="flex-1 min-w-[204px] font-semibold text-gray-500">Coin
+            </div>
+            <span class="flex-1 min-w-[204px] font-semibold text-gray-500">Total</span>
+            <span class="flex-1 min-w-[204px] font-semibold text-gray-500">Available Amount</span>
+            <span class="flex-1 min-w-[204px] font-semibold text-gray-500">In Orders</span>
+            <div class="place-fill !min-w-[113px] md:!min-w-[204px]">
+              1
+            </div>
+          </div>
+          <div class="h-[82px] left-div-table flex w-full border-b border-gray-300 items-center pl-4">
+            <div class="flex-1 min-w-[204px] flex items-center">
+              <div class="mr-2">
+                <img width="40px" height="40px" src="https://assets-currency.kucoin.com/6196181fb26db300061312bd_Logo%20color.png" alt="">
+              </div>
+              <div class="flex flex-col">
+                <span class="font-semibold">1EARTH</span>
+                <span class="text-sm text-gray-500">EarthFund</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="place-fill !min-w-[113px] md:!min-w-[204px]">
+              1
+            </div>
+          </div>
+          <div class="h-[82px] left-div-table flex w-full border-b border-gray-300 items-center pl-4">
+            <div class="flex-1 min-w-[204px] flex items-center">
+              <div class="mr-2">
+                <img width="40px" height="40px" src="https://assets-currency.kucoin.com/6196181fb26db300061312bd_Logo%20color.png" alt="">
+              </div>
+              <div class="flex flex-col">
+                <span class="font-semibold">1EARTH</span>
+                <span class="text-sm text-gray-500">EarthFund</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="place-fill !min-w-[113px] md:!min-w-[204px]">
+              1
+            </div>
+          </div>
+          <div class="h-[82px] left-div-table flex w-full border-b border-gray-300 items-center pl-4">
+            <div class="flex-1 min-w-[204px] flex items-center">
+              <div class="mr-2">
+                <img width="40px" height="40px" src="https://assets-currency.kucoin.com/6196181fb26db300061312bd_Logo%20color.png" alt="">
+              </div>
+              <div class="flex flex-col">
+                <span class="font-semibold">1EARTH</span>
+                <span class="text-sm text-gray-500">EarthFund</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="place-fill !min-w-[113px] md:!min-w-[204px]">
+              1
+            </div>
+          </div>
+          <div class="h-[82px] left-div-table flex w-full border-b border-gray-300 items-center pl-4">
+            <div class="flex-1 min-w-[204px] flex items-center">
+              <div class="mr-2">
+                <img width="40px" height="40px" src="https://assets-currency.kucoin.com/6196181fb26db300061312bd_Logo%20color.png" alt="">
+              </div>
+              <div class="flex flex-col">
+                <span class="font-semibold">1EARTH</span>
+                <span class="text-sm text-gray-500">EarthFund</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="place-fill !min-w-[113px] md:!min-w-[204px]">
+              1
+            </div>
+          </div>
+          <div class="h-[82px] left-div-table flex w-full border-b border-gray-300 items-center pl-4">
+            <div class="flex-1 min-w-[204px] flex items-center">
+              <div class="mr-2">
+                <img width="40px" height="40px" src="https://assets-currency.kucoin.com/6196181fb26db300061312bd_Logo%20color.png" alt="">
+              </div>
+              <div class="flex flex-col">
+                <span class="font-semibold">1EARTH</span>
+                <span class="text-sm text-gray-500">EarthFund</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="flex-1 min-w-[204px]">
+              <div class="flex flex-col">
+                <span class="font-semibold">0.00</span>
+                <span class="text-sm text-gray-500">≈ 0.00USD</span>
+              </div>
+            </div>
+            <div class="place-fill !min-w-[113px] md:!min-w-[204px]">
+              1
+            </div>
+          </div>
+          <div class="w-[113px] md:min-w-[210px] h-auto flex flex-col items-center z-[500] absolute right-0">
+            <span class="right-div-table w-full px-5 font-semibold text-gray-500 h-14 flex items-center bg-gray-100 z-50">Operation</span>
+            <div x-data="{ open: false }" x-on:click.outside="open = false" class="right-div-table w-full px-5 font-semibold text-[#2dbd96] text-sm h-[82px] bg-white z-[1] relative">
+              <div class="hidden md:flex flex-wrap items-center justify-start w-full h-full gap-y-0 gap-x-1 flex">
+                <button class="">Deposit</button>
+                <button class="">Withdraw</button>
+                <button class="">Transfer</button>
+                <button class="">Lend</button>
+              </div>
+              <div x-show="open" class="transition-all duration-200 ease-in shadow absolute top-0 -left-28 flex md:hidden flex-col bg-white
+                          items-start gap-5 pr-10 pl-3 py-5 z-[99999]">
+                <button class="">Deposit</button>
+                <button class="">Withdraw</button>
+                <button class="">Transfer</button>
+                <button class="">Lend</button>
+              </div>
+              <button x-on:click="open = !open" class="md:hidden inline-block text-xl text-gray-500 w-full h-full flex justify-center items-center">...</button>
+            </div>
+            <div x-data="{ open: false }" x-on:click.outside="open = false" class="right-div-table w-full px-5 font-semibold text-[#2dbd96] text-sm h-[82px] bg-white z-1 relative">
+              <div class="hidden md:flex flex-wrap items-center justify-start w-full h-full gap-y-0 gap-x-1 flex">
+                <button class="">Deposit</button>
+                <button class="">Withdraw</button>
+                <button class="">Transfer</button>
+                <button class="">Lend</button>
+              </div>
+              <div x-show="open" class="transition-all duration-200 ease-in shadow absolute top-0 -left-28 flex md:hidden flex-col bg-white
+                          items-start gap-5 pr-10 pl-3 py-5 z-[99999]">
+                <button class="">Deposit</button>
+                <button class="">Withdraw</button>
+                <button class="">Transfer</button>
+                <button class="">Lend</button>
+              </div>
+              <button x-on:click="open = !open" class="md:hidden inline-block text-xl text-gray-500 w-full h-full flex justify-center items-center">...</button>
+            </div>
+            <div x-data="{ open: false }" x-on:click.outside="open = false" class="right-div-table w-full px-5 font-semibold text-[#2dbd96] text-sm h-[82px] bg-white z-1 relative">
+              <div class="hidden md:flex flex-wrap items-center justify-start w-full h-full gap-y-0 gap-x-1 flex">
+                <button class="">Deposit</button>
+                <button class="">Withdraw</button>
+                <button class="">Transfer</button>
+                <button class="">Lend</button>
+              </div>
+              <div x-show="open" class="transition-all duration-200 ease-in shadow absolute top-0 -left-28 flex md:hidden flex-col bg-white
+                          items-start gap-5 pr-10 pl-3 py-5 z-[99999]">
+                <button class="">Deposit</button>
+                <button class="">Withdraw</button>
+                <button class="">Transfer</button>
+                <button class="">Lend</button>
+              </div>
+              <button x-on:click="open = !open" class="md:hidden inline-block text-xl text-gray-500 w-full h-full flex justify-center items-center">...</button>
+            </div>
+            <div x-data="{ open: false }" x-on:click.outside="open = false" class="right-div-table w-full px-5 font-semibold text-[#2dbd96] text-sm h-[82px] bg-white z-1 relative">
+              <div class="hidden md:flex flex-wrap items-center justify-start w-full h-full gap-y-0 gap-x-1 flex">
+                <button class="">Deposit</button>
+                <button class="">Withdraw</button>
+                <button class="">Transfer</button>
+                <button class="">Lend</button>
+              </div>
+              <div x-show="open" class="transition-all duration-200 ease-in shadow absolute top-0 -left-28 flex md:hidden flex-col bg-white
+                          items-start gap-5 pr-10 pl-3 py-5 z-[99999]">
+                <button class="">Deposit</button>
+                <button class="">Withdraw</button>
+                <button class="">Transfer</button>
+                <button class="">Lend</button>
+              </div>
+              <button x-on:click="open = !open" class="md:hidden inline-block text-xl text-gray-500 w-full h-full flex justify-center items-center">...</button>
+            </div>
+            <div x-data="{ open: false }" x-on:click.outside="open = false" class="right-div-table w-full px-5 font-semibold text-[#2dbd96] text-sm h-[82px] bg-white z-1 relative">
+              <div class="hidden md:flex flex-wrap items-center justify-start w-full h-full gap-y-0 gap-x-1 flex">
+                <button class="">Deposit</button>
+                <button class="">Withdraw</button>
+                <button class="">Transfer</button>
+                <button class="">Lend</button>
+              </div>
+              <div x-show="open" class="transition-all duration-200 ease-in shadow absolute top-0 -left-28 flex md:hidden flex-col bg-white
+                          items-start gap-5 pr-10 pl-3 py-5 z-[99999]">
+                <button class="">Deposit</button>
+                <button class="">Withdraw</button>
+                <button class="">Transfer</button>
+                <button class="">Lend</button>
+              </div>
+              <button x-on:click="open = !open" class="md:hidden inline-block text-xl text-gray-500 w-full h-full flex justify-center items-center">...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="w-screen  h-auto p-5 overflow-x-hidden">
+      <div class="w-full h-auto flex flex-col p-2">
+        <img width="180px" src="https://assets.staticimg.com/cms/media/1lB3PkckFDyfxz6VudCEACBeRRBi6sQQ7DDjz0yWM.svg" alt="Logo" class="mb-7">
+        <div x-data="{ open: false }" class="md:hidden">
+          <div @click="open = ! open" onclick="rotateArrow(8)" data-toggle="hide" class="sidebar-menu-option py-3 w-full cursor-pointer flex justify-between items-center">
+            <div class="">
+              <span class="text-black text-lg font-semibold">Contact Us</span>
+            </div>
+            <div class="h-full flex justify-center items-center">
+              <span class="sidebar-menu-arrow rotate-0 transition-all duration-300 linear text-gray-500">
+                <svg class="-rotate-90 left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div x-show="open" @click.outside="open = false" class="mt-4">
+            <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ open: false }" class="md:hidden">
+          <div @click="open = ! open" onclick="rotateArrow(9)" data-toggle="hide" class="sidebar-menu-option py-3 w-full cursor-pointer flex justify-between items-center">
+            <div class="">
+              <span class="text-black text-lg font-semibold">Products</span>
+            </div>
+            <div class="h-full flex justify-center items-center">
+              <span class="sidebar-menu-arrow rotate-0 transition-all duration-300 linear text-gray-500">
+                <svg class="-rotate-90 left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div x-show="open" @click.outside="open = false" class="mt-4">
+            <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ open: false }" class="md:hidden">
+          <div @click="open = ! open" onclick="rotateArrow(10)" data-toggle="hide" class="sidebar-menu-option py-3 w-full cursor-pointer flex justify-between items-center">
+            <div class="">
+              <span class="text-black text-lg font-semibold">Service</span>
+            </div>
+            <div class="h-full flex justify-center items-center">
+              <span class="sidebar-menu-arrow rotate-0 transition-all duration-300 linear text-gray-500">
+                <svg class="-rotate-90 left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div x-show="open" @click.outside="open = false" class="mt-4">
+            <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ open: false }" class="md:hidden">
+          <div @click="open = ! open" onclick="rotateArrow(11)" data-toggle="hide" class="sidebar-menu-option py-3 w-full cursor-pointer flex justify-between items-center">
+            <div class="">
+              <span class="text-black text-lg font-semibold">Business</span>
+            </div>
+            <div class="h-full flex justify-center items-center">
+              <span class="sidebar-menu-arrow rotate-0 transition-all duration-300 linear text-gray-500">
+                <svg class="-rotate-90 left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div x-show="open" @click.outside="open = false" class="mt-4">
+            <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ open: false }" class="md:hidden">
+          <div @click="open = ! open" onclick="rotateArrow(12)" data-toggle="hide" class="sidebar-menu-option py-3 w-full cursor-pointer flex justify-between items-center">
+            <div class="">
+              <span class="text-black text-lg font-semibold">Legal</span>
+            </div>
+            <div class="h-full flex justify-center items-center">
+              <span class="sidebar-menu-arrow rotate-0 transition-all duration-300 linear text-gray-500">
+                <svg class="-rotate-90 left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div x-show="open" @click.outside="open = false" class="mt-4">
+            <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ open: false }" class="md:hidden">
+          <div @click="open = ! open" onclick="rotateArrow(13)" data-toggle="hide" class="sidebar-menu-option py-3 w-full cursor-pointer flex justify-between items-center">
+            <div class="">
+              <span class="text-black text-lg font-semibold">KuCoin Win</span>
+            </div>
+            <div class="h-full flex justify-center items-center">
+              <span class="sidebar-menu-arrow rotate-0 transition-all duration-300 linear text-gray-500">
+                <svg class="-rotate-90 left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div x-show="open" @click.outside="open = false" class="mt-4">
+            <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ open: false }" class="md:hidden">
+          <div @click="open = ! open" onclick="rotateArrow(14)" data-toggle="hide" class="sidebar-menu-option py-3 w-full cursor-pointer flex justify-between items-center">
+            <div class="">
+              <span class="text-black text-lg font-semibold">Tools</span>
+            </div>
+            <div class="h-full flex justify-center items-center">
+              <span class="sidebar-menu-arrow rotate-0 transition-all duration-300 linear text-gray-500">
+                <svg class="-rotate-90 left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div x-show="open" @click.outside="open = false" class="mt-4">
+            <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ open: false }" class="md:hidden">
+          <div @click="open = ! open" onclick="rotateArrow(15)" data-toggle="hide" class="sidebar-menu-option py-3 w-full cursor-pointer flex justify-between items-center">
+            <div class="">
+              <span class="text-black text-lg font-semibold">Developer</span>
+            </div>
+            <div class="h-full flex justify-center items-center">
+              <span class="sidebar-menu-arrow rotate-0 transition-all duration-300 linear text-gray-500">
+                <svg class="-rotate-90 left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div x-show="open" @click.outside="open = false" class="mt-4">
+            <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+            </div>
+          </div>
+        </div>
+        <div x-data="{ open: false }" class="md:hidden">
+          <div @click="open = ! open" onclick="rotateArrow(16)" data-toggle="hide" class="sidebar-menu-option py-3 w-full cursor-pointer flex justify-between items-center">
+            <div class="">
+              <span class="text-black text-lg font-semibold">App Download</span>
+            </div>
+            <div class="h-full flex justify-center items-center">
+              <span class="sidebar-menu-arrow rotate-0 transition-all duration-300 linear text-gray-500">
+                <svg class="-rotate-90 left_svg__icon" width="24" height="24" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d="M634.88 820.352L369.408 554.88a64 64 0 010-90.496L634.752 199.04A32 32 0 01680 244.288L414.72 509.696l265.344 265.408a32 32 0 01-45.248 45.248z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div x-show="open" @click.outside="open = false" class="mt-4">
+            <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+              <a href="#">hello there</a>
+              <a href="#">hello there</a>
+            </div>
+          </div>
+        </div>
+        <div class="md:flex flex-wrap gap-y-3 inline-block">
+          <div class="w-1/2 hidden md:inline-block lg:w-1/3 xl:w-1/4">
+            <div class="w-60">
+              <div class="py-3 w-full cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black text-lg font-semibold">Contact Us</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 hidden md:inline-block lg:w-1/3 xl:w-1/4">
+            <div class="w-60">
+              <div class="py-3 w-full cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black text-lg font-semibold">Contact Us</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 hidden md:inline-block lg:w-1/3 xl:w-1/4">
+            <div class="w-60">
+              <div class="py-3 w-full cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black text-lg font-semibold">Contact Us</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 hidden md:inline-block lg:w-1/3 xl:w-1/4">
+            <div class="w-60">
+              <div class="py-3 w-full cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black text-lg font-semibold">Contact Us</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 hidden md:inline-block lg:w-1/3 xl:w-1/4">
+            <div class="w-60">
+              <div class="py-3 w-full cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black text-lg font-semibold">Contact Us</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 hidden md:inline-block lg:w-1/3 xl:w-1/4">
+            <div class="w-60">
+              <div class="py-3 w-full cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black text-lg font-semibold">Contact Us</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 hidden md:inline-block lg:w-1/3 xl:w-1/4">
+            <div class="w-60">
+              <div class="py-3 w-full cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black text-lg font-semibold">Contact Us</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 hidden md:inline-block lg:w-1/3 xl:w-1/4">
+            <div class="w-60">
+              <div class="py-3 w-full cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black text-lg font-semibold">Contact Us</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 hidden md:inline-block lg:w-1/3 xl:w-1/4">
+            <div class="w-60">
+              <div class="py-3 w-full cursor-pointer flex justify-between items-center">
+                <div class="">
+                  <span class="text-black text-lg font-semibold">Contact Us</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div class="overflow-hidden w-full h-auto flex flex-col justify-start text-gray-500 text-md gap-y-2">
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                  <a href="#">hello there</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-36">
+            <div class="w-full">
+              <div class="py-3 w-full flex justify-between items-center">
+                <div class="">
+                  <span class="text-black text-lg font-semibold">Community</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div class="overflow-hidden w-full h-auto flex flex-wrap text-gray-500 text-md gap-4">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-auto border-t mt-32 flex flex-col md:flex-row md:justify-between pt-7">
+          <span class="text-gray-500 text-sm">CopyRight © 2017 - 2022 KuCoin.com. All Rights Reserved.</span>
+          <span class="text-gray-500 text-sm">2022-06-25 11:28:56  (UTC+8)</span>
+          <div class="inline-block flex gap-5">
+            <span class="text-black text-sm">24HVolume5,314,869,119.76819412</span>
+            <span class="text-gray-500 text-sm">USDT</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="./all.js"></script>
+</body>
+
+</html>
+
